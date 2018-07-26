@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LeftNav from './components/LeftNav'
 import { Router, Route, Link } from 'react-router'
+import Main from './router/index'
 import './App.css';
 
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">edit</h1>
         </header>
-          <LeftNav name='leftnav'/>
+        <Main/>
       </div>
     );
   }

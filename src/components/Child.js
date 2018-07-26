@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+
 class Child extends Component{
     constructor(props){
         super(props)
@@ -33,6 +34,7 @@ class Child extends Component{
             name: newname
         })
         this.state.print(newname)
+        this.props.history.push('/about')
     }
     render() {
         return (

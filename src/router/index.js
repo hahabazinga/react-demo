@@ -1,20 +1,16 @@
-import { Router, Route, browserHistrory } from 'react-router'
-import LeftNav from '../components/LeftNav'
-import Child from '../components/Child'
+import { Route, Switch} from 'react-router-dom'
+import React from 'react'
 import Home from '../components/Home'
 import About from '../components/About'
+import LeftNav from '../components/LeftNav'
 
-const router = new Router({
-    mode: 'hash',
-    routes: [
-        {
-            path: '/',
-            components: LeftNav
-        },
-        {
-            path: '/child',
-            components: Child
-        }
-    ]
-})
-export default router
+const Main = () => (
+    <main>
+        <Switch>
+            <Route exact path='/' component={LeftNav} />
+            <Route path='/about/:number' component={About} />
+        </Switch>
+    </main>
+)
+
+export default Main
