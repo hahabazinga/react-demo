@@ -84,7 +84,8 @@ this.props.history.push('/about/1')
    -webkit-line-clamp: 3;
    overflow:hidden;
    }
-  4. `1px`
+   ```
+ 4. `1px`
   ```
   .scale-1px{
   position: relative;
