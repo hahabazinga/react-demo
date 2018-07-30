@@ -102,7 +102,7 @@ Function.prototype.newcall = function (contetx, ...args) {
     if (typeof contetx === 'object') {
          contetx = contetx || window
     } else {
-        contetx.Object.create(null)
+        contetx = Object.create(null)
     }
     let fn = Symbol()
     contetx[fn] = this
@@ -155,3 +155,37 @@ let devServer = {
         })
     }
 }*/
+// 实现new关键字的功能
+function newf() {
+    var obj = new Object()
+    constructor = [].shift.call(arguments)
+    obj.__proto__ = constructor.prototype
+    var ret = constructor.apply(obj, arguments)
+    return typeof ret === 'object' ? ret : obj
+}
+
+// localstorage简单封装
+var storage = (function () {
+    function set(key, val, expire) {
+        try {
+            localStorage.setItem(key, val)
+        } catch (e) {
+            if(e.name === 'QUOTA_EXCEEDED_ERR') {
+                console.log('out of localstorage')
+            }
+        }
+    }
+    function get(key) {
+        var val = localStorage.getItem(key)
+    }
+})()
+
+
+const MongoClient = require('mongodb').MongoClient
+const asset = require('asset')
+const url = 'mongodb:localhost/mydb'
+MongoClient.connect(url, function (err, db) {
+    asset.equal(null, err)
+    console.log('Connected to db...')
+    db.close()
+})
