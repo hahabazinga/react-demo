@@ -1,4 +1,4 @@
-学习react及js杂记
+## 学习react及js杂记
 
 ### router
 1. 用`BrowserRouter`容纳根元素
@@ -293,3 +293,17 @@ render() {
       methodA
     } = this.context
   ```
+
+  ### `mutation`
+  ```
+  // 属于微任务
+ const callback = function(mutation) { ... }
+ const mb = new mutationObserver(callback);
+ mb.observe(domNode, {
+     childList: true
+ }), // 注册观察
+ ma.disconnect() // 停止观察
+ ```
+
+
+
