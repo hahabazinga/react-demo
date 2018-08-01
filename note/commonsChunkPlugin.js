@@ -45,5 +45,7 @@ const config = {
 }
 // 用chunkhash作文件名适用于生产环境，可利用浏览器缓存
 module.exports = config
+/*
 for in obj的属性
 for of 数组的value
+*/

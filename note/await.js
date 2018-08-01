@@ -147,7 +147,7 @@ let plugins = [
 let devServer = {
     port: 8080,
     before(app) {
-        aa.get('./api/test.json', (req, res) => {
+        app.get('./api/test.json', (req, res) => {
             res.json({
                 code: 200,
                 message: 'hello world'
@@ -158,7 +158,7 @@ let devServer = {
 // 实现new关键字的功能
 function newf() {
     var obj = new Object()
-    constructor = [].shift.call(arguments)
+    var constructor = [].shift.call(arguments)
     obj.__proto__ = constructor.prototype
     var ret = constructor.apply(obj, arguments)
     return typeof ret === 'object' ? ret : obj

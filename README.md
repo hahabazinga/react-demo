@@ -1,5 +1,5 @@
 ## 学习react及js杂记
-
+> include note.js
 ### router
 1. 用`BrowserRouter`容纳根元素
 ```
@@ -278,7 +278,7 @@ render() {
   getChildContext () {
     return {
       propA: 'propA',
-      methodA: () => 'methodA'
+      methodA: () => { }
     }
   }
   ```
@@ -293,8 +293,7 @@ render() {
       methodA
     } = this.context
   ```
-
-  ### `mutation`
+### `mutation`
   ```
   // 属于微任务
  const callback = function(mutation) { ... }
@@ -304,6 +303,8 @@ render() {
  }), // 注册观察
  ma.disconnect() // 停止观察
  ```
-
+### `etag`和`last-modified`
+`Last-Modified`使用文件最后修改作为文件标识值，它无法处理文件一秒内多次修改的情况，而且只要文件修改了哪怕文件实质内容没有修改，
+也会重新返回资源内容；`ETag`作为“被请求变量的实体值”，其完全可以解决`Last-Modified`头部的问题，但是其计算过程需要耗费服务器资源
 
 
