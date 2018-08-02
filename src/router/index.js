@@ -6,10 +6,8 @@ import About from '../components/About'
 
 const Main = () => (
     <main>
-
         <Route path='/' component={Home} />
         <Route path='/about/:number' component={About} />
-
     </main>
 )
 
