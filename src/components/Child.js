@@ -27,6 +27,7 @@ class Child extends Component{
             print: print
         })
         this.state.print.bind(this)
+        console.log(this.match.params.id)
     }
     inputChangeHandler(e) {
         const newname = e.target.value

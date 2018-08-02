@@ -28,7 +28,7 @@ class App extends Component {
   }
 }
 ```
-3. 需要在哪个组件进行路由，就在该组件里使用`Switch`，这里是`main`
+3. 需要在哪个组件进行路由，就在该组件里使用`Route`(`Switch`包裹则只渲染第一个匹配的组件)，这里是`main`
 ```
 import { Route, Switch} from 'react-router-dom'
 import React from 'react'
