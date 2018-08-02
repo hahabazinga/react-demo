@@ -17,17 +17,8 @@ class Child extends Component{
     }
     componentDidMount() {
         this.myref.current.focus()
-        const {
-            name,
-            print
-        } = this.context
-        print(name)
-        this.setState({
-            name: name,
-            print: print
-        })
         this.state.print.bind(this)
-        console.log(this.match.params.id)
+
     }
     inputChangeHandler(e) {
         const newname = e.target.value

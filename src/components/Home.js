@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import home from '../style/home.css'
-import Child from './Child'
+import Content from './Content'
 import { Route, Switch, Link} from 'react-router-dom'
 class Home extends Component{
     constructor(props) {
@@ -35,9 +35,9 @@ class Home extends Component{
                         this.state.menu.map( item => <Link to={`${this.props.match.url}aticle/${item.id}`} className="left-nav-item" key={item.id}>{item.text}</Link>)
                     }
                 </div>
-
-                <Route path={`${this.props.match.url}aticle/:pageid`} render={() => <h3>Please select a topic.</h3>}/>
-
+                <div className="right-content">
+                    <Route path={`${this.props.match.url}aticle/:pageId`} component={Content}/>
+                </div>
             </div>
         )
     }

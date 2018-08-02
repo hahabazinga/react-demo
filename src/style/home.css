@@ -2,9 +2,12 @@
 
     width: 200px;
     background-color: #ffffff;
+    position: relative;
 }
 .left-nav-list{
+    position: absolute;
     width: 100%;
+    left:20px;
     display: flex;
     flex-direction: column;
 }
@@ -15,4 +18,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     border-bottom: 1px silver solid;
+}
+.right-content{
+    margin-left: 250px;
 }
