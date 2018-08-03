@@ -1,0 +1,2 @@
+webpackJsonp([1],{26:function(e,n,a){"use strict";Object.defineProperty(n,"__esModule",{value:!0});n.default="\nMarkdown *rocks*\n```\nvar a = 2;\n```\n"}});
+//# sourceMappingURL=1.fe98760c.chunk.js.map
