@@ -1,24 +1,31 @@
 .home-root{
 
-    width: 200px;
+    width: 100%;
     background-color: #ffffff;
     position: relative;
 }
 .left-nav-list{
     position: absolute;
-    width: 100%;
+    width: 200px;
     left:20px;
     display: flex;
     flex-direction: column;
 }
 .left-nav-item{
     height: 50px;
-    width: 100%;
+    width: 200px;
     line-height: 50px;
     text-overflow: ellipsis;
     overflow: hidden;
+    color: dimgray;
     border-bottom: 1px silver solid;
+    text-decoration: none;
+    padding: 0 10px;
+}
+.left-nav-item:hover{
+    background-color: #cccccc;
 }
 .right-content{
     margin-left: 250px;
+    width: calc(100% - 300px);
 }

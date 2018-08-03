@@ -1,24 +1,30 @@
 import React, { Component } from 'react'
-
-import Child from './Child'
-import { Link } from 'react-router-dom'
+import '../style/context.css'
+import 'github-markdown-css/github-markdown.css'
+import 'highlight.js/styles/darcula.css';
+import hljs from 'highlight.js'
+import marked from 'marked'
+marked.setOptions({
+    highlight: code => hljs.highlightAuto(code).value,
+});
 class Content extends Component{
     constructor(props) {
         super(props)
         this.state = {
-            pageId: this.props.match.params.pageId,
-            menu: [1, 2]
+            context: '正在加载中...'
         }
 
     }
-    componentDidMount() {
-        console.log(this.props.match.params.pageId)
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps)
+        import(`../static/blog${nextProps.match.params.pageId}`).then((data) => this.setState({
+            context: marked(data.default)
+        }))
+
     }
     render() {
         return (
-            <div>
-                <span>{this.props.match.params.pageId}</span>
-            </div>
+                <div className="markdown-body" dangerouslySetInnerHTML={{__html: this.state.context}}></div>
         )
     }
 
