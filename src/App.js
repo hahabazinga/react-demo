@@ -13,6 +13,7 @@ class App extends Component {
           <h1 className="App-title">edit</h1>
         </header>
         <Main/>
+
       </div>
     );
   }

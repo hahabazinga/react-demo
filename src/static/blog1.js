@@ -25,4 +25,3 @@ Markdown *rocks*
 \`\`\`
 `
  export default blog1
- export const modifyTime = '2018/8/3'
