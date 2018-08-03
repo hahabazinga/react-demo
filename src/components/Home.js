@@ -26,13 +26,14 @@ class Home extends Component{
 
         return (
             <div className="home-root">
+                <Link to="/about/" >关于</Link>
                 <div className="left-nav-list">
                     {
-                        this.state.menu.map( item => <Link to={`${this.props.match.url}aticle/${item.id}`} className="left-nav-item" key={item.id}>{item.text}</Link>)
+                        this.state.menu.map( item => <Link to={`${this.props.match.url}/aticle/${item.id}`} className="left-nav-item" key={item.id}>{item.text}</Link>)
                     }
                 </div>
                 <div className="right-content">
-                    <Route path={`${this.props.match.url}aticle/:pageId`} component={Content}/>
+                    <Route path={`${this.props.match.url}/aticle/:pageId`} component={Content}/>
                 </div>
             </div>
         )

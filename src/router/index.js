@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import React from 'react'
 import Home from '../components/Home'
 import About from '../components/About'
@@ -6,9 +6,11 @@ import About from '../components/About'
 
 const Main = () => (
     <main>
-        <Route path='/' component={Home} />
-        <Route path='/about/:number' component={About} />
+        <Switch>
+            <Route path='/react-demo/' component={Home} />
+            <Route path='/about/' component={About} />
+            <Redirect from='/*' to='/react-demo/' />
+        </Switch>
     </main>
 )
-
 export default Main
