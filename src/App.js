@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Router, Route, Link } from 'react-router'
 import Main from './router/index'
 import './App.css';
 

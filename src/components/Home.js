@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../style/home.css'
 import Content from './Content'
-import { Route, Switch, Link} from 'react-router-dom'
+import { Route, Link} from 'react-router-dom'
 class Home extends Component{
     constructor(props) {
         super(props)
@@ -21,10 +21,6 @@ class Home extends Component{
                 }
             ]
         }
-    }
-    componentDidMount() {
-        const localhost1 = process.env.NODE_ENV === 'DEVELOPMENT' ? 'localhost:3000' : ''
-        console.log(`${localhost1}${this.props.match.url}aticle`)
     }
     render() {
 

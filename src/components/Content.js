@@ -15,12 +15,16 @@ class Content extends Component{
         }
 
     }
+    componentDidMount() {
+        this.fetchMd(this.props)
+    }
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps)
+        this.fetchMd(nextProps)
+    }
+    fetchMd(nextProps) {
         import(`../static/blog${nextProps.match.params.pageId}`).then((data) => this.setState({
             context: marked(data.default)
-        }))
-
+        })).catch(() => this.fetchMd(nextProps))
     }
     render() {
         return (
