@@ -35,7 +35,6 @@ class Home extends Component{
         const githubIcon = require('../static/img/github.png')
         return (
             <div className="home-root">
-
                 <div className="left-nav-list">
                     {
                         this.state.menu.map( item => <div className={item.id === this.state.chosed ? "left-nav-item  left-nav-chosed" : "left-nav-item"} key={item.id}>
