@@ -24,7 +24,9 @@ class Content extends Component{
     fetchMd(nextProps) {
         import(`../static/blog${nextProps.match.params.pageId}`).then((data) => this.setState({
             context: marked(data.default)
-        })).catch(() => this.fetchMd(nextProps))
+        })).catch((e) => this.setState({
+            context: e.toString()
+        }))
     }
     render() {
         return (

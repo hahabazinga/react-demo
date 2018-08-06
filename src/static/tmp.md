@@ -1,7 +1,6 @@
- const blog1 = `
 ### grid 布局
  1. Css
- \`\`\`
+ ```
  body {
      height: 500px;
      display: grid;
@@ -23,8 +22,6 @@
    grid-area: sidebar;
    background-color: #7f8c8d;
 
- \`\`\`
- 2. 效果图
- ![效果图](https://github.com/hahabazinga/react-demo/src/static/img/blog1_result.png)
-`
- export default blog1
+ ```
+2. 效果图
+![效果图](./img/blog1_result.png)
