@@ -26,6 +26,6 @@
  \`\`\`
  2. 效果图
  
- ![效果图](https://github.com/hahabazinga/react-demo/blob/master/src/static/img/blog1_result.png?raw=true)
+ ![效果图](https://github.com/hahabazinga/react-demo/blob/master/src/static/img/p1_result.png?raw=true)
 `
  export default blog1
