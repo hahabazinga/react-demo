@@ -16,6 +16,8 @@ class Content extends Component{
 
     }
     componentDidMount() {
+        ///const appkey = 'a66edc481d5f8640ddee452fb1c12596'
+        // fetch('http://www.kdniao.com/JSInvoke/MSearchTrackDetail.aspx?ExpNo=65806686409').then(res => res.json()).then(response => console.log(response))
         this.fetchMd(this.props)
     }
     componentWillReceiveProps(nextProps) {

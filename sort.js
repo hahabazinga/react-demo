@@ -38,3 +38,37 @@ function partition(item, left, right) {
 var arr = [1,4,5,3,2];
 quickSort(arr, 0, arr.length-1);
 console.log(arr);
+
+
+function quicksort(arr, left, right) {
+    var len = arr.length;
+    if (len > 1) {
+        var index = partition(arr, left, right);
+        if (left < index - 1) {
+            quickSort(arr, left, index - 1);
+        }
+        if (index < right) {
+            quickSort(arr, index, right);
+        }
+    }
+    return arr;
+}
+function partition(arr, left, right) {
+    var priovt = arr[Math.floor((left + right) / 2)],
+        i = left,
+        j = right;
+    while (i <= j) {
+        while (arr[i] < priovt) {
+            i++;
+        }
+        while (arr[j] > priovt) {
+            j--
+        }
+        if (i <= j) {
+            [arr[i], arr[j]] = [arr[j], arr[i]]
+            i++;
+            j--;
+        }
+    }
+    return i;
+}
