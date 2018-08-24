@@ -40,3 +40,5 @@ const diffChildren = (oldchildren, newchildren, index, patches) => {
         leftNodes = child
     })
 }
+arguments[fn, 1]
+arguments.fn()
