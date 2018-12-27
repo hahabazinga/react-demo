@@ -15,7 +15,7 @@ class App extends Component {
     fetch('https://ipapi.co/8.8.8.8/json/').then(response => response.json()).then(data => {
 
       this.setState({
-          text:data.country_name
+        country:data.country_name
       })
      
     }).catch(e => alert(e.message));
